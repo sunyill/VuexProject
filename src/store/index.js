@@ -14,6 +14,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    incrementData (state) {
+      return state.count++
+    }
   },
   actions: {
   },

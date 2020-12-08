@@ -7,6 +7,9 @@
     --{{$store.getters.handleData}}
     <hr>
     最后处理数据-{{handleLastData}}
+    <hr>
+    <div>{{this.$store.state.count}}</div>
+    <input type="button" name="" id="" value="点击增加" @click="handleClick">
   </div>
 </template>
 
@@ -25,6 +28,11 @@ export default {
   },
   created () {
     console.log(this)
+  },
+  methods: {
+    handleClick () {
+      this.$store.commit('incrementData')
+    }
   }
 }
 </script>

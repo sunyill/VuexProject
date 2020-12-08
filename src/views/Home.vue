@@ -10,15 +10,20 @@
     <hr>
     <div>{{this.$store.state.count}}</div>
     <input type="button" name="" id="" value="点击增加" @click="handleClick">
+    <hr>
+    <mutation-payload/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 // import vuex from '@/store'
+import mutationPayload from './mutation-payload'
+// import MutationPayload from './mutation-payload.vue'
 export default {
   name: 'Home',
   components: {
+    mutationPayload
 
   },
   computed: {

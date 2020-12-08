@@ -8,6 +8,11 @@ export default new Vuex.Store({
     count: 1,
     msg: 'hello aZan'
   },
+  getters: {
+    handleData (state) {
+      return state.msg.split('').reverse().join('')
+    }
+  },
   mutations: {
   },
   actions: {

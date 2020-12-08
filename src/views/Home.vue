@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     this is my first VuexPage
+    <hr>
     {{$store.state.msg}}
+    <hr>
+    --{{$store.getters.handleData}}
+    <hr>
+    最后处理数据-{{handleLastData}}
   </div>
 </template>
 
@@ -12,6 +17,14 @@ export default {
   name: 'Home',
   components: {
 
+  },
+  computed: {
+    handleLastData () {
+      return this.$store.getters.handleData
+    }
+  },
+  created () {
+    console.log(this)
   }
 }
 </script>

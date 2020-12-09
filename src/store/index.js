@@ -22,6 +22,12 @@ export default new Vuex.Store({
     },
     incrementMultiData (state, payload) {
       state.count += payload.num
+    },
+    // mutation 必须是同步的, 不能操作异步,  如果操作异步,必须在action中
+    syncIncrementData (state, one) {
+      setTimeout(() => {
+        state.count += one
+      }, 2000)
     }
   },
   actions: {

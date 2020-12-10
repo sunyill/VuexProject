@@ -12,6 +12,8 @@
     <input type="button" name="" id="" value="点击增加" @click="handleClick">
     <hr>
     <mutation-payload/>
+    Action<hr>
+    <Action></Action>
   </div>
 </template>
 
@@ -20,10 +22,12 @@
 // import vuex from '@/store'
 import mutationPayload from './mutation-payload'
 // import MutationPayload from './mutation-payload.vue'
+import Action from '@/components/vuex-action'
 export default {
   name: 'Home',
   components: {
-    mutationPayload
+    mutationPayload,
+    Action
 
   },
   computed: {

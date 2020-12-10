@@ -31,6 +31,11 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    handleActionIncrement (context) {
+      setTimeout(() => {
+        context.commit('incrementData')
+      }, 2000)
+    }
   },
   modules: {
   }

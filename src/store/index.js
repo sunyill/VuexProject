@@ -38,9 +38,15 @@ export default new Vuex.Store({
     //   }, 2000)
     // }
     // two
-    handleActionIncrement ({ commit }) {
+    // handleActionIncrement ({ commit }) {
+    //   setTimeout(() => {
+    //     commit('incrementData')
+    //   }, 2000)
+    // }
+    // three
+    handleActionIncrement ({ commit }, payload) {
       setTimeout(() => {
-        commit('incrementData')
+        commit('incrementMultiData', payload)
       }, 2000)
     }
   },

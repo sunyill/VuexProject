@@ -9,7 +9,12 @@
 export default {
   methods: {
     dispatchAction () {
-      this.$store.dispatch('handleActionIncrement')
+      // this.$store.dispatch('handleActionIncrement')
+      // this.$store.dispatch('handleActionIncrement', { num: 5 })
+      this.$store.dispatch({
+        type: 'handleActionIncrement',
+        num: '10'
+      })
     }
   }
 }
